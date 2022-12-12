@@ -7,7 +7,7 @@ export default function App() {
       <View>
         <Text>Task List App</Text>
       </View>
-      <Text>Another piece of text</Text>
+      <Text style={styles.dummyText}>Another piece of text</Text>
       <Button title="Tap Me!" />
     </View>
   );
@@ -19,5 +19,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  dummyText: {
+    margin: 16,
+    padding: 16,
+    borderWidth: 2,
+    borderColor: 'red',
   },
 });
