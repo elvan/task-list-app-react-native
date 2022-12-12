@@ -5,10 +5,10 @@ export default function App() {
   return (
     <View style={styles.appContainer}>
       <View style={styles.inputContainer}>
-        <TextInput placeholder="Your task..." style={styles.textInput} />
+        <TextInput style={styles.textInput} placeholder="Your task..." />
         <Button title="Add Task" />
       </View>
-      <View>
+      <View style={styles.tasksContainer}>
         <Text>List of tasks...</Text>
       </View>
     </View>
@@ -17,17 +17,27 @@ export default function App() {
 
 const styles = StyleSheet.create({
   appContainer: {
-    padding: 50,
+    flex: 1,
+    paddingTop: 50,
+    paddingHorizontal: 16,
   },
   inputContainer: {
+    flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 24,
+    borderBottomWidth: 1,
+    borderBottomColor: '#cccccc',
   },
   textInput: {
     borderWidth: 1,
     borderColor: '#cccccc',
-    width: '80%',
+    width: '70%',
     marginRight: 8,
     padding: 8,
+  },
+  tasksContainer: {
+    flex: 5,
   },
 });
