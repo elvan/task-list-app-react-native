@@ -1,29 +1,22 @@
 import React from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <View style={styles.appContainer}>
       <View>
-        <Text>Task List App</Text>
+        <TextInput placeholder="Your task..." />
+        <Button title="Add Task" />
       </View>
-      <Text style={styles.dummyText}>Another piece of text</Text>
-      <Button title="Tap Me!" />
+      <View>
+        <Text>List of tasks...</Text>
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  dummyText: {
-    margin: 16,
-    padding: 16,
-    borderWidth: 2,
-    borderColor: 'red',
+  appContainer: {
+    padding: 50,
   },
 });
